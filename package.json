@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "npm run build && npm run open",
-    "open": "parcel index.html --open",
-    "build": "parcel build index.html",
+    "open": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
     "test": "jest src/**/*.ts"
   },
   "dependencies": {
