@@ -2,12 +2,11 @@
   "name": "ts-interview-questions",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
   "scripts": {
-    "start": "npm run build && npm run open",
-    "open": "parcel src/index.html --open",
-    "build": "parcel build src/index.html",
-    "test": "jest src/**/*.ts"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "test": "jest src/**/*.ts",
+    "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
     "@types/jest": "28.1.7",
@@ -19,11 +18,17 @@
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1"
+    "parcel": "^2.0.0",
+    "@parcel/config-default": "^2.7.0",
+    "@parcel/transformer-typescript-tsc": "^2.7.0"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "keywords": [],
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "16"
   }
 }
